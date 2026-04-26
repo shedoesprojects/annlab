@@ -1,19 +1,16 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
 
-x=np.linspace(-2,2,100)
-y=x**3+2*x**2
-j=3*x**2+4*x
-h=6*x+4
-# Confusion Matrix
-y_true = [0, 1, 1, 0]
-y_pred = [0, 1, 0, 0]
-print("Confusion Matrix")
-print(confusion_matrix(y_true, y_pred))
-plt.plot(y,label="func")
-plt.plot(j,label="Jacobian")
-plt.plot(h,label="Hessian") 
-plt.legend()
-plt.title("Function, Jacobian, and Hessian Analysis")
-plt.show()
+x = np.array([0.5, -0.3])          # input
+w = np.array([[1,2],[3,4]])       # weights
+
+y = np.tanh(np.dot(w,x))          # NN output
+
+J = (1-y**2) * w.sum(axis=1)      # Jacobian
+
+H = np.outer(J,J)                 # Hessian
+
+print("jacobian matrix")
+print(J)
+
+print("hessian")
+print(H)

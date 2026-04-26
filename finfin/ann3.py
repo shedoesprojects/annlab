@@ -16,7 +16,7 @@ plt.scatter(xtest[:,0],xtest[:,1],c=ytest,label="Test")
 plt.scatter(xtrain[:,0],xtrain[:,1],c=ytrain,marker='x',label="training data")
 xx, yy = np.meshgrid(np.linspace(-2,2,200), np.linspace(-2,2,200))  # STEP 1: Make grid
 Z = model.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)  # STEP 2: Predict grid
-plt.contourf(xx, yy, Z, alpha=0.2, cmap='bwr')                      # STEP 3: Color grid
+plt.contour(xx, yy, Z, alpha=0.2)                      # STEP 3: Color grid
 plt.title("crab classification")
 plt.xlabel("scaled claw size")
 plt.ylabel("scaled shell hardness")
