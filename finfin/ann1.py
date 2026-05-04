@@ -11,7 +11,7 @@ for m in range(10):
 print("weight",w)
 print("bias",b)
 plt.scatter(x,y,color='r',label='target output')
-n=np.linspace(-0.5,0.5,100)
+n=np.linspace(-0.2,1.2)
 plt.plot(n,w*n+b,label='activation line"')
 plt.xlabel('input')
 plt.ylabel('output')
