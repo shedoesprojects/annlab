@@ -1,0 +1,6 @@
+Age,Gender,FamilyHistory,Diet,LifeStyle,Cholesterol,HeartDisease
+MiddleAged,Male,Yes,High,Sedentary,High,Yes
+SeniorCitizen,Female,No,Medium,Moderate,BorderLine,No
+Youth,Male,Yes,High,Active,High,Yes
+MiddleAged,Female,No,Low,Athlete,Normal,No
+SeniorCitizen,Male,Yes,Medium,Sedentary,High,Yes
